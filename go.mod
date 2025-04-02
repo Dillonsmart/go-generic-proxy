@@ -1,4 +1,4 @@
-module example/web-service-gin
+module github.com/dillonsmart/go-generic-proxy
 
 go 1.23.3
 

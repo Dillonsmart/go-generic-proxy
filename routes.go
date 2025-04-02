@@ -1,7 +1,7 @@
 package main
 
 import (
-	"example/web-service-gin/controllers"
+	"github.com/dillonsmart/go-generic-proxy/controllers"
 	"github.com/gin-gonic/gin"
 )
 
