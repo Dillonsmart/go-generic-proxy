@@ -22,9 +22,11 @@ func HandleAny(c *gin.Context) {
 }
 
 func forwardRequest(c *gin.Context) {
-	envError := godotenv.Load()
-	if envError != nil {
-		log.Fatalf("Error loading .env file")
+	if os.Getenv("FORWARD_TO") == "" {
+		envError := godotenv.Load()
+		if envError != nil {
+			log.Fatalf("Error loading .env file")
+		}
 	}
 
 	forwardTo := os.Getenv("FORWARD_TO")
