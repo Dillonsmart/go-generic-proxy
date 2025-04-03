@@ -7,7 +7,7 @@ import (
 )
 
 func Ping(c *gin.Context) {
-	logging.Logger.Info.Println("Calling ping endpoint")
+	logging.Logger.Info.Println("Request to /ping received")
 	c.JSON(http.StatusOK, gin.H{
 		"message": "pong",
 	})

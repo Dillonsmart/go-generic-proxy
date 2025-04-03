@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"github.com/dillonsmart/go-generic-proxy/logging"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	"io"
@@ -11,7 +12,7 @@ import (
 )
 
 func HandleAny(c *gin.Context) {
-	// Handle any request here
+	logging.Logger.Info.Println("Request to /proxy/" + c.Param("path") + " received")
 	c.JSON(200, gin.H{
 		"message": "Forwarding request received",
 		"path":    c.Param("path"),
